@@ -7,6 +7,7 @@ rcloneSync() {
   local fromPath="$1"
   local toPath="$2"
 
+  echo "Sync from: ${fromPath}, to: ${toPath}"
   if [ "${COMMAND_FLAG}" = '--apply' ]; then
     rclone sync --progress "${fromPath}" "${toPath}" --exclude desktop.ini
   else
