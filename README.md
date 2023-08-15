@@ -34,4 +34,14 @@ Update files on the cloud:
 sync push --apply
 ```
 
+## Extras
+
+If you're using [Git Bash] with Windows and want to automatically `sync` on startup, create `auto-sync.sh` file at `C:\Users\YOUR_USER\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup` (replace `YOUR_USER` with your username) with the following contents:
+```bash
+sync pull --apply
+echo 'Sync complete...'
+sleep 5
+```
+
 [Rclone]: https://github.com/rclone/rclone
+[Git Bash]: https://git-scm.com/downloads
