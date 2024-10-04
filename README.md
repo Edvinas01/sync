@@ -2,7 +2,7 @@
 [Rclone] wrapper which allows to conveniently pull and push files. The main purpose of this tool is to be a replacement for the horrible Google Drive client, however it should work with other storage providers as well.
 
 ## Setup
-- Make sure [Rclone] is installed and setup using `rclone config`.
+- Make sure [Rclone] is installed and setup using `rclone config` (set the name of your remote to `remote` when configuring).
 - Clone this repo.
 - Run `setup.sh`.
 
