@@ -9,10 +9,18 @@ rcloneSync() {
 
   if [ "${COMMAND_FLAG}" = '--apply' ]; then
     echo "Sync: '${fromPath}' -> '${toPath}'"
-    rclone sync --progress "${fromPath}" "${toPath}" --exclude desktop.ini
+    rclone sync "${fromPath}" "${toPath}" \
+      --exclude desktop.ini \
+      --progress \
+      --fast-list \
+      --metadata
   else
     echo "Sync (dry-run): '${fromPath}' -> '${toPath}'"
-    rclone sync --dry-run "${fromPath}" "${toPath}" --exclude desktop.ini
+    rclone sync "${fromPath}" "${toPath}" \
+      --exclude desktop.ini \
+      --dry-run \
+      --fast-list \
+      --metadata
   fi
 }
 
