@@ -3,7 +3,7 @@
 syncPaths='sync-paths.txt'
 syncDir="$(pwd)"
 
-echo 'Where would you like to store your files?'
+echo 'Where would you like to store your files (use the following path format /c/Users/MyUser/MyFiles)?'
 read syncDir
 
 echo 'Cleaning up old sync setup...'
@@ -26,6 +26,7 @@ if [ ! -f "${syncPaths}" ]; then
   echo '# Documents/Work' >>"${syncPaths}"
   echo '# Media/Wallpapers' >>"${syncPaths}"
   echo '# Media/Music' >>"${syncPaths}"
+  echo '# Make sure there is a trailing new line after the final path!!!' >>"${syncPaths}"
 else
   echo "${syncPaths} already exists, skipping..."
 fi
